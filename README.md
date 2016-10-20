@@ -1,5 +1,4 @@
 Simple ITK tests projects
-
 https://itk.org
 
 ### Compile
