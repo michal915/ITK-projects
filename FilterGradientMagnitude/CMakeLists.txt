@@ -1,4 +1,4 @@
-project(hello)
+project(FilterGradientMagnitude)
 
 file(GLOB src
   "*.cpp"
