@@ -28,14 +28,21 @@ int main(int argc, char* argv[])
     return -1;
   }
 
+  std::string fileIn;
+  std::string fileOut;
+
+  auto reader = Reader::New();
+  auto writer = Writer::New();
+  auto filter = Filter::New();
+
   for(decltype(argc) img = 1; img < argc; img++)
   {
-    const std::string fileIn{argv[img]};
-    const std::string fileOut{"out_" + fileIn};
+    fileIn = argv[img];
+    fileOut = "out_" + fileIn;
 
-    auto reader = Reader::New();
-    auto writer = Writer::New();
-    auto filter = Filter::New();
+    reader = Reader::New();
+    writer = Writer::New();
+    filter = Filter::New();
 
     reader->SetFileName(fileIn);
     writer->SetFileName(fileOut);
